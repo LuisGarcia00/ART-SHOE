@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RegistroComponent } from './registro/registro.component';
 import { SesionComponent } from './sesion/sesion.component';
 import { ContentComponent } from './content/content.component';
+import { PracticasComponent } from './practicas/practicas.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContentComponent } from './content/content.component';
     FooterComponent,
     RegistroComponent,
     SesionComponent,
-    ContentComponent
+    ContentComponent,
+    PracticasComponent
   ],
   imports: [
     BrowserModule,
