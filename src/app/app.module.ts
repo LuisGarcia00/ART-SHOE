@@ -11,6 +11,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { SesionComponent } from './sesion/sesion.component';
 import { ContentComponent } from './content/content.component';
 import { PracticasComponent } from './practicas/practicas.component';
+import { CargarscriptsService } from './cargarscripts.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { PracticasComponent } from './practicas/practicas.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CargarscriptsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
