@@ -8,8 +8,8 @@ import { CargarscriptsService } from '../cargarscripts.service';
 })
 export class HeaderComponent {
 
-  constructor (private Cargarscripts: CargarscriptsService){
-    Cargarscripts.carga([
+  constructor (private cargarscripts: CargarscriptsService){
+    cargarscripts.carga([
       "assets/vendor/purecounter/purecounter_vanilla.js",
       "assets/vendor/aos/aos.js",
       "assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
