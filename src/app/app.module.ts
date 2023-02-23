@@ -30,6 +30,7 @@ import { CargarscriptsService } from './cargarscripts.service';
     AppRoutingModule
   ],
   providers: [
+    
     CargarscriptsService
   ],
   bootstrap: [AppComponent]
