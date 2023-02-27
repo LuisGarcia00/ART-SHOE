@@ -17,7 +17,7 @@ export class HeaderComponent {
       "assets/vendor/swiper/swiper-bundle.min.js",
       "assets/vendor/waypoints/noframework.waypoints.js",
       "assets/vendor/php-email-form/validate.js",
-      "assets/js/main.js"
+      "assets/js/main.js", 
     
     ])
   }
