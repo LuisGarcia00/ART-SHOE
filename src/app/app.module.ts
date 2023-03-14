@@ -18,8 +18,8 @@ import { ComentariosComponent } from './content/comentarios/comentarios.componen
 import { BlogComponent } from './content/blog/blog.component';
 import { CategoriasComponent } from './content/categorias/categorias.component';
 import { ContactoComponent } from './content/contacto/contacto.component';
-
-
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule} from '@angular/fire/compat';
 
 const appRoutes: Routes = [  
   {path: '', component: InicioComponent},
@@ -51,7 +51,17 @@ const appRoutes: Routes = [ 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes,{enableTracing:true})
+    RouterModule.forRoot(appRoutes,{enableTracing:true}),
+    FormsModule,
+    AngularFireModule.initializeApp({
+  apiKey: "AIzaSyDRVeQMhb1IKyfw-hy4zW50oI89VItrZrQ",
+  authDomain: "artshoeapp.firebaseapp.com",
+  projectId: "artshoeapp",
+  storageBucket: "artshoeapp.appspot.com",
+  messagingSenderId: "669003326117",
+  appId: "1:669003326117:web:ac5f3f41a696aab896234c",
+  measurementId: "G-JBCKGB16ZH"
+    })
   ],
   providers: [
     
