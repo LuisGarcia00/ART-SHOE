@@ -19,6 +19,8 @@ import { BlogComponent } from './content/blog/blog.component';
 import { CategoriasComponent } from './content/categorias/categorias.component';
 import { ContactoComponent } from './content/contacto/contacto.component';
 
+
+
 const appRoutes: Routes = [  
   {path: '', component: InicioComponent},
   {path: 'inicio', component:InicioComponent }, 
