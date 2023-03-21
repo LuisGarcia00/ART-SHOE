@@ -29,6 +29,7 @@ const appRoutes: Routes = [ 
   {path: 'blog', component:BlogComponent }, 
   {path: 'categorias', component:CategoriasComponent }, 
   {path: 'contacto', component:ContactoComponent },
+  {path: 'registro', component:RegistroComponent},
 ]
 
 @NgModule({
