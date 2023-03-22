@@ -1,0 +1,31 @@
+<div class="signupFrm">
+    <form action="" class="form">
+        <h1 class="title">Registrar</h1>
+
+        <div class="inputcontainer">
+            <input type="text" class="input" placeholder="a">
+            <label for="" class="label">Correo</label>
+        </div>
+
+                <div class="inputcontainer">
+            <input type="text" class="input" placeholder="a">
+            <label for="" class="label">Nombre del Usuario</label>
+        </div>
+
+                <div class="inputcontainer">
+            <input type="text" class="input" placeholder="a">
+            <label for="" class="label">Contraseña</label>
+        </div>
+
+                <div class="inputcontainer">
+            <input type="text" class="input" placeholder="a">
+            <label for="" class="label">Confirmar Contraseña</label>
+        </div>
+
+        <input type="submit" class="submitBtn" value="Registrar">
+    </form>
+    <button (click)="Registrarme">Registrarme <i class="fas fa-sign-in-alt"></i></button>
+    <a [routerLink]="['../sesion']"> ¿Ya tienes cuenta? ¡Iniciar sesion!
+    </a>
+</div>
+
