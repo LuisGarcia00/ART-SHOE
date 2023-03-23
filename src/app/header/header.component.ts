@@ -7,6 +7,7 @@ import { CargarscriptsService } from 'src/app/cargarscripts.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  
 
   constructor (private cargarscripts: CargarscriptsService){
     cargarscripts.carga([

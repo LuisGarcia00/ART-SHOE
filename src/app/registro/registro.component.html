@@ -3,29 +3,31 @@
         <h1 class="title">Registrar</h1>
 
         <div class="inputcontainer">
-            <input type="text" class="input" placeholder="a">
-            <label for="" class="label">Correo</label>
+            <label>Nombre
+            </label>
+            <input type="text"[(ngModel)]="form.nombre" placeholder="Escribe tu nombre">
         </div>
 
-                <div class="inputcontainer">
-            <input type="text" class="input" placeholder="a">
-            <label for="" class="label">Nombre del Usuario</label>
+        <div class="inputcontainer">
+                    <label>Correo Electronico
+                    </label>
+                    <input type="email"[(ngModel)]="form.correo" placeholder="Escribe tu correo electronico">
         </div>
 
-                <div class="inputcontainer">
-            <input type="text" class="input" placeholder="a">
-            <label for="" class="label">Contraseña</label>
+        <div class="inputcontainer">
+                    <label>Contraseña
+                    </label>
+                    <input type="password"[(ngModel)]="form.contrasena" placeholder="Debe contener 8 caracteres">
         </div>
 
-                <div class="inputcontainer">
+            <div class="inputcontainer">
+                    <label>Confirma tu contraseña
+                    </label>
+                    <input type="password"[(ngModel)]="ccontrasena" placeholder="Debe contener 8 caracteres">
             <input type="text" class="input" placeholder="a">
-            <label for="" class="label">Confirmar Contraseña</label>
         </div>
 
-        <input type="submit" class="submitBtn" value="Registrar">
+        <input type="submit" (click)="Registrarme()" class="submitBtn" value="Registrar">
     </form>
-    <button (click)="Registrarme">Registrarme <i class="fas fa-sign-in-alt"></i></button>
-    <a [routerLink]="['../sesion']"> ¿Ya tienes cuenta? ¡Iniciar sesion!
-    </a>
 </div>
 
