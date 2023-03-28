@@ -5,29 +5,34 @@
         <div class="inputcontainer">
             <label>Nombre
             </label>
-            <input type="text"[(ngModel)]="form.nombre" placeholder="Escribe tu nombre">
+            <input type="text"[(ngModel)]="form.nombre" placeholder="Escribe tu nombre.">
         </div>
 
         <div class="inputcontainer">
                     <label>Correo Electronico
                     </label>
-                    <input type="email"[(ngModel)]="form.correo" placeholder="Escribe tu correo electronico">
+                    <input type="email"[(ngModel)]="form.correo" placeholder="Escribe tu correo electronico.">
         </div>
 
         <div class="inputcontainer">
                     <label>Contraseña
                     </label>
-                    <input type="password"[(ngModel)]="form.contrasena" placeholder="Debe contener 8 caracteres">
+                    <input type="password"[(ngModel)]="form.contrasena" placeholder="Debe contener 8 caracteres.">
         </div>
 
             <div class="inputcontainer">
                     <label>Confirma tu contraseña
                     </label>
-                    <input type="password"[(ngModel)]="ccontrasena" placeholder="Debe contener 8 caracteres">
+                    <input type="password"[(ngModel)]="ccontrasena" placeholder="Debe contener 8 caracteres.">
             <input type="text" class="input" placeholder="a">
         </div>
 
-        <input type="submit" (click)="Registrarme()" class="submitBtn" value="Registrar">
+        <!--BOTON-->
+        <button (click)="Registrarme()">Registrarme <i class ="fas fa-sign-in-alt"></i></button>
+        <br><br>
+        <a [routerLink]="['../sesion']">
+         ¿Ya tienes cuenta? ¡Inicia Sesión!
+        </a>
     </form>
 </div>
 
