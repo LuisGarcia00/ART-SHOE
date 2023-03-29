@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CargarscriptsService } from 'src/app/cargarscripts.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +9,15 @@ import { CargarscriptsService } from 'src/app/cargarscripts.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  
+  form={
+    correo: " ",
+  contrasena: " "
+  }
+  constructor(private cargarscripts: CargarscriptsService, private auth:AngularFireAuth, private router:Router) {
 
-  constructor (private cargarscripts: CargarscriptsService){
+  
     cargarscripts.carga([
+
       "assets/vendor/aos/aos.js",
       "assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
       "assets/vendor/glightbox/js/glightbox.min.js",
@@ -22,4 +29,22 @@ export class HeaderComponent {
     
     ])
   }
+  ngOninit() :void {
+    this.auth.authState.subscribe(user =>{
+      if(user){
+        this.router.navigate(['/inicio'])
+      }
+    })
+}
+iniciarSesion(){
+  this.auth.signInWithEmailAndPassword(this.form.correo, this.form.contrasena).then((userCredential)=>{
+    const user =userCredential.user;
+    console.log (user)
+    alert("¡Bienvenid@!")
+  })
+  .catch((error) =>{
+    const errorCode = error.code;
+    const errorMessage = error.errorMessage;
+  });
+}
 }

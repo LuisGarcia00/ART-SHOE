@@ -19,7 +19,7 @@ ngOninit(): void{
 
 }
 Registrarme(){
-  if(this.form.nombre != ' ' && this.form.correo != ' ' && this.form.contrasena != ' ' && this.ccontrasena != ''){
+  if(this.form.nombre != '' && this.form.correo != '' && this.form.contrasena != '' && this.ccontrasena != ''){
     if(this.form.contrasena!=this.ccontrasena){
       alert("Las contraseñas no coinciden.")
     }
@@ -43,7 +43,7 @@ Registrarme(){
 
 adduser(form:any){
   var promise = new Promise((resolve,reject)=>{
-    this.auth.createUserWithEmailAndPassword(form.correo, form.comtrasena)
+    this.auth.createUserWithEmailAndPassword(form.correo, form.contrasena)
     .then((result)=> {
       resolve(result)
     })
