@@ -31,6 +31,7 @@ usuario_activo!: boolean
     
     ])
   }
+  
   ngOninit() :void {
     this.auth.authState.subscribe(user =>{
       if(user){
@@ -39,10 +40,10 @@ usuario_activo!: boolean
     })
     this.auth.authState.subscribe(user => {
       if (user) {
-      this.usuario_activo = false
+      this.usuario_activo = true
    }
    else{
-     this.usuario_activo = true
+     this.usuario_activo = false
    }
    })
   }
