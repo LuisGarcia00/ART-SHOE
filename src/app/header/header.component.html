@@ -54,11 +54,14 @@
       <div class="signupFrm">
         <form class="form">
             <h1 class="title">Iniciar Sesion</h1>
-    
-            <input type="email" name="correo " [(ngModel)]="form.correo" placeholder="Escribe tu correo electronico.">
+            <label>
+              Correo
+          </label>
+          <br>
+            <input type="email" name="correo" [(ngModel)]="form.correo" placeholder="Escribe tu correo electronico.">
             <br>
             <label>
-                contraseña
+                Contraseña
             </label>
             <br>
             <input type="password" [(ngModel)]="form.contrasena" name="contrasena" placeholder="Debe contener 8 caracteres.">
@@ -70,10 +73,10 @@
             
             <!--BOTON-->
 
-            <button (click)="iniciarSesion()" *ngIf="usuario_activo==true"><i class ="fas fa-sign-in-alt"></i>Ingresar </button>
+            <button (click)="iniciarSesion()" ><i class ="fas fa-sign-in-alt"></i>Ingresar </button>
             <br><br>
             <a [routerLink]="['../registro']">
-             ¿Ya tienes cuenta? ¡Inicia Sesión!
+             ¡Inicia Sesión!
             </a>
         </form>
     </div>
