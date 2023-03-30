@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CargarscriptsService } from 'src/app/cargarscripts.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+usuario_activo!: boolean
   form={
     correo: " ",
   contrasena: " "
   }
+  
   constructor(private cargarscripts: CargarscriptsService, private auth:AngularFireAuth, private router:Router) {
 
   
@@ -35,7 +37,15 @@ export class HeaderComponent {
         this.router.navigate(['/inicio'])
       }
     })
-}
+    this.auth.authState.subscribe(user => {
+      if (user) {
+      this.usuario_activo = false
+   }
+   else{
+     this.usuario_activo = true
+   }
+   })
+  }
 iniciarSesion(){
   this.auth.signInWithEmailAndPassword(this.form.correo, this.form.contrasena).then((userCredential)=>{
     const user =userCredential.user;
@@ -46,5 +56,19 @@ iniciarSesion(){
     const errorCode = error.code;
     const errorMessage = error.errorMessage;
   });
+}
+cerrarSesion(){
+  this.auth.authState.subscribe(user => {
+    if (user) {
+      this.auth.signOut().then(()=> {
+        localStorage.removeItem('user');
+        alert("¡Sesion Finalizada!")
+        window.location.reload()
+      })
+    }
+    else{
+      this.router.navigate(['/inicio'])
+    }
+  })
 }
 }

@@ -31,9 +31,10 @@
   Iniciar Sesion
 </button>
 <br>
-<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Cerrar Sesion
-</button>
+<a [routerLink]="['']" (click)="cerrarSesion()">
+  <i class="fa-solid fa-right-from-bracket" *ngIf="usuario_activo==false"></i>Cerrar Sesion
+</a>
+
 <!-- Modal -->
 
 
@@ -68,7 +69,8 @@
             <br><br>
             
             <!--BOTON-->
-            <button (click)="iniciarSesion()">Ingresar <i class ="fas fa-sign-in-alt"></i></button>
+
+            <button (click)="iniciarSesion()" *ngIf="usuario_activo==true"><i class ="fas fa-sign-in-alt"></i>Ingresar </button>
             <br><br>
             <a [routerLink]="['../registro']">
              ¿Ya tienes cuenta? ¡Inicia Sesión!
