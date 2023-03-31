@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 usuario_activo!: boolean
+
   form={
     correo: " ",
   contrasena: " "

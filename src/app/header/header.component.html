@@ -32,8 +32,9 @@
 </button>
 <br>
 <a [routerLink]="['']" (click)="cerrarSesion()">
-  <i class="fa-solid fa-right-from-bracket" *ngIf="usuario_activo==false"></i>Cerrar Sesion
+  <i class="fa-solid fa-right-from-bracket" *ngIf="usuario_activo==true"></i>Cerrar Sesion
 </a>
+
 
 <!-- Modal -->
 
@@ -73,9 +74,10 @@
             
             <!--BOTON-->
 
-            <button (click)="iniciarSesion()" ><i class ="fas fa-sign-in-alt"></i>Ingresar </button>
+            <button (click)="iniciarSesion()" ><i class ="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
             <br><br>
-            <a [routerLink]="['../registro']">
+            <a [routerLink]="['../registro']" (click)="iniciarSesion()">
+              <i class="fa-solid fa-right-from-bracket" *ngIf="usuario_activo==false"></i>iniciar Sesion
              ¡Inicia Sesión!
             </a>
         </form>
