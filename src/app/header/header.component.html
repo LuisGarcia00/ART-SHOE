@@ -25,27 +25,22 @@
           
         </li>
         <br>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
  
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Iniciar Sesion
 </button>
-<br>
-<a [routerLink]="['']" (click)="cerrarSesion()">
-  <i class="fa-solid fa-right-from-bracket" *ngIf="usuario_activo==true"></i>Cerrar Sesion
-</a>
 
-
-<!-- Modal -->
-
-
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-  </div>
+<a [routerLink]="['']" (click)="cerrarSesion()" *ngIf="usuario_activo==true">
+  <i class="fa-solid fa-right-from-bracket" >Cerrar Sesion</i></a>
+</div>
 </header><!-- End Header -->
 
+<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -54,15 +49,12 @@
       </div>
       <div class="signupFrm">
         <form class="form">
-            <h1 class="title">Iniciar Sesion</h1>
-            <label>
-              Correo
-          </label>
-          <br>
-            <input type="email" name="correo" [(ngModel)]="form.correo" placeholder="Escribe tu correo electronico.">
+            <h1 class="title" *ngIf="usuario_activo==false">Iniciar Sesion </h1>
+    
+            <input type="email" name="correo " [(ngModel)]="form.correo" placeholder="Escribe tu correo electronico.">
             <br>
             <label>
-                Contraseña
+                contraseña
             </label>
             <br>
             <input type="password" [(ngModel)]="form.contrasena" name="contrasena" placeholder="Debe contener 8 caracteres.">
@@ -74,11 +66,10 @@
             
             <!--BOTON-->
 
-            <button (click)="iniciarSesion()" ><i class ="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
+            <button (click)="iniciarSesion()" ><i class ="fas fa-sign-in-alt"></i>Ingresar </button>
             <br><br>
-            <a [routerLink]="['../registro']" (click)="iniciarSesion()">
-              <i class="fa-solid fa-right-from-bracket" *ngIf="usuario_activo==false"></i>iniciar Sesion
-             ¡Inicia Sesión!
+            <a [routerLink]="['../registro']">
+             ¿Ya tienes cuenta? ¡Inicia Sesión!
             </a>
         </form>
     </div>
