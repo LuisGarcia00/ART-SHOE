@@ -33,12 +33,8 @@ usuario_activo!: boolean
     ])
   }
   
-  ngOninit() :void {
-    this.auth.authState.subscribe(user => {
-      if (user) {
-        this.router.navigate(['/inicio'])
-      }
-    })
+  ngOnInit() :void {
+
     this.auth.authState.subscribe(user => {
       if (user) {
       this.usuario_activo = true
