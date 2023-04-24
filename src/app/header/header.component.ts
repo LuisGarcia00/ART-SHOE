@@ -12,8 +12,8 @@ export class HeaderComponent {
 usuario_activo!: boolean
 
   form={
-    correo: " ",
-  contrasena: " "
+    correo: "",
+  contrasena: ""
   }
   
   constructor(private cargarscripts: CargarscriptsService, private auth:AngularFireAuth, private router:Router) {

@@ -9,9 +9,9 @@ import { AngularFireAuth} from '@angular/fire/compat/auth';
 })
 export class RegistroComponent{
 form={
-  nombre: " ",
-  correo: " ",
-contrasena: " "
+  nombre: "",
+  correo: "",
+contrasena: ""
 }
 ccontrasena: any  
 constructor(private auth:AngularFireAuth) { }

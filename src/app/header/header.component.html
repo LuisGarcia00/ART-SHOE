@@ -14,17 +14,6 @@
         <li><a routerLink="/comentarios">Comentarios</a></li>
         <li><a routerLink="/blog">Blog</a></li>
         <li><a [routerLink]="['registro']">Registrarse</a></li>
-        <li class="dropdown"><a routerLink="#"><span>Categorias</span> <i class="bi bi-chevron-down"></i></a>
-          
-          <ul>
-            <li><a href="#">Anime</a></li>
-            <li><a href="#">Celebridades</a></li>
-            <li><a href="#">Artistico</a></li>
-            <li><a href="#">Mas vendidos</a></li>
-          </ul>
-          
-        </li>
-        <br>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -54,7 +43,7 @@
             <input type="email" name="correo " [(ngModel)]="form.correo" placeholder="Escribe tu correo electronico.">
             <br>
             <label>
-                contraseña
+             contraseña
             </label>
             <br>
             <input type="password" [(ngModel)]="form.contrasena" name="contrasena" placeholder="Debe contener 8 caracteres.">
@@ -65,8 +54,7 @@
             <br><br>
             
             <!--BOTON-->
-
-            <button (click)="iniciarSesion()" ><i class ="fas fa-sign-in-alt"></i>Ingresar </button>
+            <button type="button" (click)="iniciarSesion()" *ngIf="usuario_activo==false" class ="btn btn-success">Ingresar </button>
             <br><br>
             <a [routerLink]="['../registro']">
              ¿Ya tienes cuenta? ¡Inicia Sesión!
