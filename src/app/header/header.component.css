@@ -1,7 +1,46 @@
-img{
-    width: 100px;
-    height: auto;
-}
-a{
-    color: #02adf0;
-}
+
+nav {
+
+    background: #f5f5f5;
+    
+    border-top: 1px solid #c3c3c3;
+    
+    font-size: 12px;
+    
+    overflow: hidden;
+    
+    position: fixed;
+    
+    bottom: 0;
+    
+    width: 100%;
+    
+    }
+    
+    nav .nav tr td {
+    
+    padding: 12px 0;
+    
+    background: #f5f5f5;
+    
+    text-align: center;
+    
+    width: 16%;
+    
+    }
+    
+    
+    
+    
+    nav a:link, nav a:visited {
+    
+    color: #a6a6a6;
+    
+    }
+    
+    
+    
+    
+    nav a:hover, nav a:active, nav a.active {
+    color: #1c298a;
+    }
