@@ -7,29 +7,28 @@
       <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
     </div>
 
-    <!-- <nav id="navbar" class="navbar">  
+    <nav id="navbar" class="navbar">  
       <ul>
         <li><a class="active" routerLink="/inicio">Inicio</a></li>
         <li><a routerLink="/modelos">Modelos</a></li>
         <li><a routerLink="/comentarios">Comentarios</a></li>
         <li><a routerLink="/blog">Blog</a></li>
-        <li><a [routerLink]="['registro']">Registrarse</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav> -->
-    <nav>
-
+    </nav> 
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    
       <table class="nav">
       
       <tr>
       
       <td>
       
-      <a [routerLink]="['inicio']" [routerLinkActive]="'active'"> <!-- ROUTERLINK no funciona :c -->
+      <a [routerLink]="['inicio']" [routerLinkActive]="'active'"> 
       
       <i class="bi bi-house-heart fa-2x"></i><br>
       
-      <span>Inicio</span>
+      <span> Inicio</span>
       
       </a>
       
@@ -41,7 +40,7 @@
       
       <i class="bi bi-card-image fa-2x"></i><br>
       
-      <span>Modelos</span>
+      <span> Modelos</span>
       
       </a>
       
@@ -53,7 +52,7 @@
       
       <i class="bi bi-chat-heart-fill fa-2x"></i><br>
       
-      <span>Comentarios</span>
+      <span> Comentarios</span>
       
       </a>
       
@@ -65,7 +64,7 @@
       
       <i class="bi bi-window-sidebar fa-2x"></i><br>
       
-      <span>Blog</span>
+      <span> Blog</span>
       
       </a>
       
@@ -77,54 +76,52 @@
       
       <i class="bi bi-person-circle fa-2x"></i><br>
       
-      <span>Registrarse</span>
+      <span> Registrarse</span>
       
       </a>
       
       </td>
       </table>  
       
-      </nav>
+      </nav> -->
 
  
 <!-- Button trigger modal -->
 <button type="button" *ngIf="usuario_activo==false" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Iniciar Sesion
 </button>
-
 <a [routerLink]="['']" (click)="cerrarSesion()" *ngIf="usuario_activo==true">
   <i class="fa-solid fa-right-from-bracket" >Cerrar Sesion</i></a>
 </div>
 </header><!-- End Header -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="h2" id="exampleModalLabel">Bienvenido</h1> 
+        <h1 class="h2" id="exampleModalLabel">Inicio de sesión</h1> 
       </div>
       <div class="signupFrm">
-        <form class="form">
-            <h1 class="title" >Iniciar Sesion </h1>
+        <form class="form container">
+            <label> Ingresar correo</label>
     
-            <input type="email" name="correo " [(ngModel)]="form.correo" placeholder="Escribe tu correo electronico.">
+            <input class="form-control" type="email" name="correo " [(ngModel)]="form.correo" placeholder="Escribe tu correo electronico.">
             <br>
             <label>
-             contraseña
+             Contraseña
             </label>
             <br>
-            <input type="password" [(ngModel)]="form.contrasena" name="contrasena" placeholder="Debe contener 8 caracteres.">
-            <br>
-            <a href="">
-                ¿Olvidaste tu contraseña?
-            </a>
+            <input class="form-control" type="password" [(ngModel)]="form.contrasena" name="contrasena" placeholder="Debe contener 8 caracteres.">
+              <a data-bs-dismiss="modal" [routerLink]="['registro']">
+                ¿No tienes cuenta? ¡Regístrate!
+               </a>
+          
             <br><br>
             
             <!--BOTON-->
             <button type="button" (click)="iniciarSesion()" *ngIf="usuario_activo==false" class ="btn btn-success">Ingresar </button>
             <br><br>
-            
         </form>
     </div>
   </div>

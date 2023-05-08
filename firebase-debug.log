@@ -1,0 +1,53 @@
+[debug] [2023-05-08T20:06:27.346Z] ----------------------------------------------------------------------
+[debug] [2023-05-08T20:06:27.353Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Alumno\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-08T20:06:27.354Z] CLI Version:   11.29.0
+[debug] [2023-05-08T20:06:27.354Z] Platform:      win32
+[debug] [2023-05-08T20:06:27.355Z] Node Version:  v16.17.0
+[debug] [2023-05-08T20:06:27.463Z] Time:          Mon May 08 2023 14:06:27 GMT-0600 (GMT-06:00)
+[debug] [2023-05-08T20:06:27.464Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-08T20:06:27.495Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-05-08T20:06:27.614Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-08T20:06:27.615Z] > authorizing via signed-in user (luisegarcia1899@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Angular\ART-SHOE2
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2023-05-08T20:06:27.956Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-05-08T20:06:27.957Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-08T20:07:42.143Z] Using project from CLI flag: artshoeapp
+[debug] [2023-05-08T20:07:42.144Z] > refreshing access token with scopes: []
+[debug] [2023-05-08T20:07:42.146Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-08T20:07:42.146Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-08T20:07:42.442Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-08T20:07:42.442Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-08T20:07:42.532Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/artshoeapp [none]
+[debug] [2023-05-08T20:07:42.991Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/artshoeapp 200
+[debug] [2023-05-08T20:07:42.991Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/artshoeapp {"projectId":"artshoeapp","projectNumber":"669003326117","displayName":"Art-Shoe","name":"projects/artshoeapp","resources":{"hostingSite":"artshoeapp"},"state":"ACTIVE","etag":"1_adf9012b-c634-4c96-872f-e4b8acc7fe01"}
+[info] i  Using project artshoeapp (Art-Shoe) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
