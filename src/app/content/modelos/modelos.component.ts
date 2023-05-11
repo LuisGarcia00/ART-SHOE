@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-modelos',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./modelos.component.css']
 })
 export class ModelosComponent {
+usuario_activo!:boolean
 
+form={
+  compra:""
 }
+}
+
+
