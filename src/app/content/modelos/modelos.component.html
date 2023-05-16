@@ -11,7 +11,7 @@
           <p class=" centrar-texto">El modelo de tenis blanco es uno de los mas vendidos debido a que son un clasico del
             closet combinable para todo tipo de ocasion. En este modelo aplicamos edición de los vengadores por supuesto
             al gusto del cliente.</p>
-            <button class="btn btn-warning" >Agregar al Carrito <i class ="fas fa-sign-in-alt"></i></button>
+            <button class="btn btn-warning" *ngIf="usuario_activo">Agregar al Carrito <i class ="fas fa-sign-in-alt"></i></button>
             <br><br>
             
 
@@ -24,7 +24,7 @@
           <p class=" centrar-texto">En este modelo es uno de los mas modernos y de edición limitada debido a la tinta neón
             que utilizamos. En este estilo aplicamos diseño de Itachi</p>
 
-            <button class="btn btn-warning" >Agregar al Carrito <i class ="fas fa-sign-in-alt"></i></button>
+            <button class="btn btn-warning" *ngIf="usuario_activo" >Agregar al Carrito <i class ="fas fa-sign-in-alt"></i></button>
             <br><br>
             
 
@@ -36,7 +36,7 @@
           <h4 class="title mb-2">Modelo Fosforescente  (Precio $2000)</h4>
           <p class=" centrar-texto">Uno de los modelos mas coloridos con tinta fosforescente, igualmente al gusto de uno de
             nuestro clientes.</p>
-            <button class="btn btn-warning" >Agregar al Carrito <i class ="fas fa-sign-in-alt"></i></button>
+            <button class="btn btn-warning" *ngIf="usuario_activo" >Agregar al Carrito <i class ="fas fa-sign-in-alt"></i></button>
             <br><br>
             
 

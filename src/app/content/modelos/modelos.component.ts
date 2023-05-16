@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { from } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 
 @Component({
   selector: 'app-modelos',
@@ -12,6 +13,20 @@ usuario_activo!:boolean
 form={
   compra:""
 }
+constructor( private auth:AngularFireAuth) {
+
 }
 
 
+ngOnInit() :void {
+
+  this.auth.authState.subscribe(user => {
+    if (user) {
+    this.usuario_activo = true
+ }
+ else{
+   this.usuario_activo = false
+ }
+ })
+}
+}
